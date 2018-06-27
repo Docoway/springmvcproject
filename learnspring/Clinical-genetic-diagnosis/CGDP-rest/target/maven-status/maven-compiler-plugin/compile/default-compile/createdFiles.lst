@@ -1,0 +1,6 @@
+org/kb4md/rest/model/RestStatus.class
+org/kb4md/rest/AppConfig/WebContextInitializer.class
+org/kb4md/rest/model/RestResult.class
+org/kb4md/rest/AppConfig/WebContextConfig.class
+org/kb4md/rest/AppConfig/WebContextConfigs.class
+org/kb4md/rest/DiseaseView/DiseaseViewController.class

@@ -1,0 +1,6 @@
+org/kb4md/disease/view/service/PhenotypeInfoService.class
+org/kb4md/disease/view/mapper/PhenotypeInfoMapper.class
+org/kb4md/disease/view/service/PhenotypeInfoServiceImpl.class
+org/kb4md/disease/view/config/DiseaseViewMybatisConfig.class
+org/kb4md/disease/view/config/DiseaseViewConfig.class
+org/kb4md/disease/view/data/PhenotypeInfo.class

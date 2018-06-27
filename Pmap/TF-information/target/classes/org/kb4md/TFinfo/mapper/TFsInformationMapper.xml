@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kb4md.TFinfo.mapper.TFsInformationMapper">
+    <resultMap id="TFsInformation" type="org.kb4md.TFinfo.data.TFsInformation">
+        <result property="chr" column="chr"/>
+        <result property="PromoterID" column="promoter_id"/>
+        <result property="direction" column="direction"/>
+        <result property="proStart" column="pro_start"/>
+        <result property="proEnd" column="pro_end"/>
+        <result property="promoter" column="promoter"/>
+        <result property="TFs" column="TFs"/>
+    </resultMap>
+
+    <select id="getPromoteridRecommend" resultMap="TFsInformation" parameterType="String">
+        SELECT promoter_id FROM genetotf.EPDgene WHERE promoter_id LIKE "#{inputTerm}%"
+    </select>
+
+    <select id="getPromoterByPromoterid" resultMap="TFsInformation" parameterType="String">
+        SELECT promoter_id,chr,direction,pro_start,pro_end,promoter FROM genetotf.EPDgene WHERE promoter_id = #{promoterID}
+    </select>
+
+    <select id="getTFsByPromoterid" resultMap="TFsInformation" parameterType="String">
+        SELECT direction,TFs FROM genetotf.EPDgene WHERE promoter_id = #{promoterID}
+    </select>
+</mapper>

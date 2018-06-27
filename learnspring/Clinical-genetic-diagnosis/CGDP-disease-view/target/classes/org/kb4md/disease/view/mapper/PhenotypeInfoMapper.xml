@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kb4md.disease.view.mapper.PhenotypeInfoMapper">
+    <resultMap id="PhenotypeInfo" type="org.kb4md.disease.view.data.PhenotypeInfo">
+        <result property="HGNC_genes" column="hgnc_genes"/>
+        <result property="Phenotype" column="phenotype"/>
+        <result property="Chromosome" column="chromosome"/>
+    </resultMap>
+    <select id="getGeneRecommend" resultMap="PhenotypeInfo" parameterType="String">
+        SELECT hgnc_genes,phenotype,chromosome FROM genetotf.full_omim_table WHERE hgnc_genes LIKE "#{geneSymbol}%"
+    </select>
+</mapper>

@@ -1,0 +1,6 @@
+org/kb4md/TFinfo/service/TFinfoService.class
+org/kb4md/TFinfo/mapper/TFsInformationMapper.class
+org/kb4md/TFinfo/data/TFsInformation.class
+org/kb4md/TFinfo/config/TFinfoMybatisConfig.class
+org/kb4md/TFinfo/service/TFinfoServiceImpl.class
+org/kb4md/TFinfo/config/TFinfoConfig.class
